@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.cycle.all.js"></script>
+		<script src="js/site.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/site.css">
+		
+		<script>
+		$(document).ready(function(){
+			$('#HOME_VIEW').cycle({ 
+				fx:     'fade', 
+    			speed:  50, 
+    			next:   '#HOME_VIEW', 
+    			timeout: 0  
+			});
+		});
+		</script>
+	</head>
+	
+	<body onload="homeSelected();">
+	
+		<div id="NAME_TITLE">
+			<div id="NAME">David Jones</div>
+			<div id="TITLE">Software Developer</div>
+		</div>
+		
+		<div id="NAV">
+			<div id="HOME_LINK" class="nav_item" onclick="homeSelected();">Home</div>
+			<div id="ABOUT_LINK" class="nav_item" onclick="aboutSelected();">About</div>
+			<div id="CONTACT_LINK" class="nav_item" onclick="contactSelected();">Contact</div>
+		</div>
+		
+		<div id="MAIN_CONTENT">
+            
+            <div id="left_arrow" class="left_arrow"></div>
+            <div id="right_arrow" class="right_arrow"></div>
+		
+			<div id="HOME_VIEW" class="view">
+				<div class="w100 h100">
+					<div id="HOME_CONTENT1" class="content_section">1</div>
+					<div id="HOME_IMAGE1" class="image_section">1</div>
+				</div>
+				<div class="w100 h100">
+					<div id="HOME_CONTENT2" class="content_section">2</div>
+					<div id="HOME_IMAGE2" class="image_section">2</div>
+				</div>
+			</div>
+			
+			<div id="ABOUT_VIEW" class="view">
+				<div id="ABOUT_CONTENT" class="content_section">About content</div>
+				<div id="ABOUT_IMAGE" class="image_section">About Image</div>
+			</div>
+			
+			<div id="CONTACT_VIEW" class="view">
+				<div id="CONTACT_CONTENT" class="content_section">
+					<div class="text_white">Please feel free to contact me in relation to 
+											consultations or to provide feedback</div>
+					<div class="inline_block text_white">Email:</div>
+					<div class="inline_block text_white">david041188@gmail.com</div>
+				</div>
+				<div id="CONTACT_IMAGE" class="image_section">Contact image</div>
+			</div>
+            
+		</div>
+	
+	</body>
+</html>
